@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netbox-cloudflare-plugin"
+version = "0.1.0"
+authors = [
+  { name="Vincent Simonin", email="vincent@saashup.com" }
+]
+description = "Manage Cloudflare with Netbox & style."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+keywords = ["netbox", "netbox-plugin", "cloudflare"]
+
+[project.urls]
+"Homepage" = "https://github.com/SaaShup/netbox-cloudflare-plugin"
+"Bug Tracker" = "https://github.com/SaaShup/netbox-cloudflare-plugin/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["netbox_cloudflare_plugin*"]
