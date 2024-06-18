@@ -1,0 +1,36 @@
+{% extends 'generic/object.html' %}
+
+{% load buttons %}
+{% load custom_links %}
+{% load perms %}
+{% load plugins %}
+
+{% block controls %}
+  <div class="btn-list justify-content-end mb-2">
+    {% plugin_buttons object %}
+
+    {# Add/edit/delete/etc. buttons #}
+    {% block control-buttons %}
+
+      {# Default buttons #}
+      {% if perms.extras.add_bookmark and object.bookmarks %}
+        {% bookmark_button object %}
+      {% endif %}
+      {% if request.user|can_add:object %}
+        {% clone_button object %}
+      {% endif %}
+      {% if request.user|can_delete:object %}
+        {% delete_button object %}
+      {% endif %}
+    {% endblock control-buttons %}
+  </div>
+
+  {# Custom links #}
+  <div class="d-flex justify-content-end">
+    <div class="btn-list">
+      {% block custom-links %}
+        {% custom_links object %}
+      {% endblock custom-links %}
+    </div>
+  </div>
+{% endblock controls %}

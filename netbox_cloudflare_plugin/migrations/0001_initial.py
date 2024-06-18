@@ -134,7 +134,7 @@ class Migration(migrations.Migration):
                     models.IntegerField(
                         default=3600,
                         validators=[
-                            django.core.validators.MinValueValidator(limit_value=30),
+                            django.core.validators.MinValueValidator(limit_value=60),
                             django.core.validators.MaxValueValidator(limit_value=86400),
                         ],
                     ),

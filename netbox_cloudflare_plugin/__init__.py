@@ -17,6 +17,11 @@ class NetBoxCloudflareConfig(PluginConfig):
         'cloudflare_base_url': 'https://api.cloudflare.com/client/v4',
     }
 
+    def ready(self):
+        from . import signals # pylint: disable=unused-import, import-outside-toplevel
+
+        return super().ready()
+
 
 # pylint: disable=C0103
 config = NetBoxCloudflareConfig

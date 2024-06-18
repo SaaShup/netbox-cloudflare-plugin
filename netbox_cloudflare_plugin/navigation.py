@@ -14,6 +14,14 @@ zoneaccount_buttons = [
     )
 ]
 
+dnsrecord_buttons = [
+    PluginMenuButton(
+        link="plugins:netbox_cloudflare_plugin:dnsrecord_add",
+        title="Add",
+        icon_class="mdi mdi-plus-thick"
+    )
+]
+
 dns_item = [
     PluginMenuItem(
         link="plugins:netbox_cloudflare_plugin:zoneaccount_list",
@@ -22,10 +30,10 @@ dns_item = [
         permissions=["netbox_cloudflare_plugin.view_zoneaccount"],
     ),
     PluginMenuItem(
-        link="plugins:netbox_cloudflare_plugin:zoneaccount_list",
+        link="plugins:netbox_cloudflare_plugin:dnsrecord_list",
         link_text="Records",
-        buttons=zoneaccount_buttons,
-        permissions=["netbox_cloudflare_plugin.view_zoneaccount"],
+        buttons=dnsrecord_buttons,
+        permissions=["netbox_cloudflare_plugin.view_dnsrecord"],
     ),
 ]
 

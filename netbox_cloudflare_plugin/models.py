@@ -109,7 +109,7 @@ class DnsRecord(NetBoxModel):
         null=False,
         blank=False,
         validators=[
-            MinValueValidator(limit_value=30),
+            MinValueValidator(limit_value=60),
             MaxValueValidator(limit_value=86400),
         ],
     )
@@ -129,3 +129,10 @@ class DnsRecord(NetBoxModel):
                 name="%(app_label)s_%(class)s_unique_zone_name_type_content",
             ),
         )
+
+    def __str__(self):
+        return f"{self.name} {self.type} {self.content} {self.ttl}"
+
+    def get_absolute_url(self):
+        """override"""
+        return reverse("plugins:netbox_cloudflare_plugin:dnsrecord", args=[self.pk])

@@ -1,0 +1,352 @@
+[
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1001/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token1"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.4",
+                        "name": "test1.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "1",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1001",
+                        "zone_name": "test1.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1002/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token2"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.5",
+                        "name": "test2.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "2",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1002",
+                        "zone_name": "test2.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1003/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token3"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.6",
+                        "name": "test3.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "3",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1003",
+                        "zone_name": "test3.cloud"
+                    },
+                    {
+                        "content": "test3.cloud",
+                        "name": "api.test3.cloud",
+                        "proxied": false,
+                        "type": "CNAME",
+                        "comment": "",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "4",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": false,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1003",
+                        "zone_name": "test3.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1004/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token4"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.7",
+                        "name": "test4.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "5",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1004",
+                        "zone_name": "test4.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1005/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token5"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.8",
+                        "name": "test5.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "6",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1005",
+                        "zone_name": "test5.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/zones/1006/dns_records",
+            "queryStringParameters": {
+                "per_page": [
+                    "100"
+                ],
+                "page": [
+                    "1"
+                ]
+            },
+            "headers": {
+                "Authorization": [
+                    "Bearer token6"
+                ]
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": [
+                    {
+                        "content": "198.51.100.9",
+                        "name": "test6.cloud",
+                        "proxied": false,
+                        "type": "A",
+                        "comment": "Domain verification record",
+                        "created_on": "2014-01-01T05:20:00.12345Z",
+                        "id": "7",
+                        "locked": true,
+                        "meta": {
+                            "auto_added": true,
+                            "source": "primary"
+                        },
+                        "modified_on": "2014-01-01T05:20:00.12345Z",
+                        "proxiable": true,
+                        "tags": [],
+                        "ttl": 3600,
+                        "zone_id": "1006",
+                        "zone_name": "test6.cloud"
+                    }
+                ],
+                "result_info": {
+                    "count": 1,
+                    "page": 1,
+                    "per_page": 1,
+                    "total_count": 1,
+                    "total_pages": 1
+                }
+            }
+        }
+    }
+]

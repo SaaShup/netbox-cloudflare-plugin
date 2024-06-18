@@ -1,0 +1,14 @@
+services:
+    mockserver:
+        image: mockserver/mockserver
+        container_name: mockserver
+        ports:
+            - 1080:1080
+        volumes:
+          - ./netbox_cloudflare_plugin/tests/mockserver/config:/config
+        environment:
+            - MOCKSERVER_INITIALIZATION_JSON_PATH=/config/initializerJson.json
+        networks:
+            - netbox-cloudflare-plugin
+networks:
+    netbox-cloudflare-plugin:
