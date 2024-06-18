@@ -1,0 +1,48 @@
+{% extends 'netbox_cloudflare_plugin/no_edit_base.html' %}
+
+{% load plugins %}
+
+{% block content %}
+<div class="row mb-3">
+  <div class="col col-md-6">
+    <div class="card">
+      <h5 class="card-header">DNS RECORD</h5>
+      <div class="card-body">
+        <table class="table table-hover attr-table">
+            <tr>
+                <th scope="row">Zone</th>
+                <td>{{ object.zone|linkify }}</td>
+              </tr>
+          <tr>
+            <th scope="row">Name</th>
+            <td>{{ object.name }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Type</th>
+            <td>{{ object.get_type_display }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Content</th>
+            <td>{{ object.content }}</td>
+          </tr>
+          <tr>
+            <th scope="row">TTL</th>
+            <td>{{ object.ttl }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Proxied</th>
+            <td>{% checkmark object.proxied %}</td>
+          </tr>
+          <tr>
+            <th scope="row">Record ID</th>
+            <td>{{ object.record_id }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    {% include 'inc/panels/custom_fields.html' %}
+    {% include 'inc/panels/tags.html' %}
+    {% plugin_left_page object %}
+  </div>
+</div>
+{% endblock content %}

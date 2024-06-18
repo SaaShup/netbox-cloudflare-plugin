@@ -5,7 +5,7 @@ import requests_mock
 from django.core.serializers.json import DjangoJSONEncoder
 from django.conf import settings
 from netbox_cloudflare_plugin.utilities.cloudflare_dns_client import CloudflareDnsClient
-from netbox_cloudflare_plugin.models import ZoneAccount, DnsRecord
+from netbox_cloudflare_plugin.models import ZoneAccount
 
 
 class CloudflareDnsClientTestCase(unittest.TestCase):

@@ -1,4 +1,4 @@
-{% extends 'generic/object.html' %}
+{% extends 'netbox_cloudflare_plugin/no_edit_base.html' %}
 
 {% load plugins %}
 
@@ -18,12 +18,8 @@
             <td>{{ object.zone_id }}</td>
           </tr>
           <tr>
-            <th scope="row">Email</th>
-            <td>{{ object.email }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Key</th>
-            <td>{{ object.key }}</td>
+            <th scope="row">Token</th>
+            <td>{{ object.token }}</td>
           </tr>
         </table>
       </div>
