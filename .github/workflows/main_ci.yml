@@ -60,6 +60,9 @@ jobs:
         run: |
           pip install pylint
           pylint --rcfile $(pwd)/netbox-cloudflare-plugin/.pylintrc --init-hook 'import os; import sys; sys.path.append(os.getcwd() + "/netbox/netbox")' $(pwd)/netbox-cloudflare-plugin/netbox_cloudflare_plugin/
+      - name: Start Mockserver
+        working-directory: netbox-cloudflare-plugin
+        run: docker run -v ./netbox_cloudflare_plugin/tests/mockserver/config:/config -e MOCKSERVER_INITIALIZATION_JSON_PATH=/config/initializerJson.json -p 1080:1080 -d mockserver/mockserver
       - name: Run tests
         working-directory: netbox
         run: |
