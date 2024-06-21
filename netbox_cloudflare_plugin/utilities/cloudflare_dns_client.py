@@ -66,7 +66,7 @@ class CloudflareDnsClient:
             timeout=5,
             json={
                 "content": dns_record.content,
-                "name": dns_record.name,
+                "name": dns_record.name + '.' + self.zone_account.zone_name,
                 "proxied": dns_record.proxied,
                 "type": dns_record.type,
                 "ttl": dns_record.ttl,
