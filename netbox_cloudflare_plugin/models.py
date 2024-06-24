@@ -72,8 +72,8 @@ class DnsRecord(NetBoxModel):
     )
     record_id = name = models.CharField(
         max_length=32,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         validators=[
             MinLengthValidator(limit_value=1),
             MaxLengthValidator(limit_value=32),

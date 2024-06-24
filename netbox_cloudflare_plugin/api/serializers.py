@@ -56,6 +56,7 @@ class DnsRecordSerializer(NetBoxModelSerializer):
     url = serializers.HyperlinkedIdentityField(
         view_name="plugins-api:netbox_cloudflare_plugin-api:dnsrecord-detail"
     )
+    zone = NestedZoneAccountSerializer()
 
     class Meta:
         """DnsRecord Serializer Meta class"""
@@ -65,6 +66,7 @@ class DnsRecordSerializer(NetBoxModelSerializer):
             "id",
             "url",
             "display",
+            "zone",
             "record_id",
             "name",
             "type",
@@ -76,7 +78,7 @@ class DnsRecordSerializer(NetBoxModelSerializer):
             "last_updated",
             "tags",
         )
-        brief_fields = NestedZoneAccountSerializer.Meta.fields
+        brief_fields = NestedDnsRecordSerializer.Meta.fields
 
 
 class ZoneAccountSerializer(NetBoxModelSerializer):

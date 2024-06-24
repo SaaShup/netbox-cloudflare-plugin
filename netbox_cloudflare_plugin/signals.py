@@ -35,6 +35,9 @@ def create_dnsrecord(instance, **_kwargs):
     """Create a DNS Record on Cloudflare"""
 
     if instance.pk is None:
+        if not instance.name.endswith("." + instance.zone.zone_name):
+            instance.name = instance.name + "." + instance.zone.zone_name
+
         client = CloudflareDnsClient(
             instance.zone,
             settings.PLUGINS_CONFIG["netbox_cloudflare_plugin"]["cloudflare_base_url"],

@@ -8,7 +8,7 @@ class NetBoxCloudflareConfig(PluginConfig):
     name = "netbox_cloudflare_plugin"
     verbose_name = " NetBox Cloudflare Plugin"
     description = "Manage Cloudflare"
-    version = "0.1.0"
+    version = "0.2.0"
     base_url = "cloudflare"
     min_version = "4.0.0"
     author= "Vincent Simonin <vincent@saashup.com>"
