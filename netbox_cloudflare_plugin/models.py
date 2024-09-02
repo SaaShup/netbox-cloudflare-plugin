@@ -1,6 +1,7 @@
 """Cloudflare Plugin Models definitions"""
 
 from django.db import models
+from django.db.models import Q
 from django.urls import reverse
 from django.core.validators import (
     MinLengthValidator,
@@ -125,8 +126,13 @@ class DnsRecord(NetBoxModel):
         )
         constraints = (
             models.UniqueConstraint(
-                fields=["zone", "name"],
-                name="%(app_label)s_%(class)s_unique_zone_name_type_content",
+                fields=["zone", "name", "type", "content"],
+                name="%(app_label)s_%(class)s_unique_zone_name_type_content"
+            ),
+            models.UniqueConstraint(
+                fields=["zone", "name", "type"],
+                name="%(app_label)s_%(class)s_unique_zone_name_type",
+                condition=Q(proxied=True)
             ),
         )
 

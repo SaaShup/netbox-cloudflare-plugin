@@ -796,5 +796,287 @@
                 }
             }
         }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1003/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token3"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.16",
+                "name": "test9.test3.cloud",
+                "proxied": true,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.16",
+                    "name": "test8.test3.cloud",
+                    "proxied": true,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c351",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1003",
+                    "zone_name": "test3.cloud"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1003/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token3"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.17",
+                "name": "test9.test3.cloud",
+                "proxied": true,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.17",
+                    "name": "test8.test3.cloud",
+                    "proxied": true,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c352",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1003",
+                    "zone_name": "test3.cloud"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1004/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token4"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.18",
+                "name": "test10.test4.cloud",
+                "proxied": false,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.18",
+                    "name": "test10.test4.cloud",
+                    "proxied": false,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c352",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1004",
+                    "zone_name": "test4.cloud"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1004/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token4"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.19",
+                "name": "test10.test4.cloud",
+                "proxied": false,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.19",
+                    "name": "test10.test4.cloud",
+                    "proxied": false,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c354",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1004",
+                    "zone_name": "test4.cloud"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1005/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token5"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.20",
+                "name": "test11.test5.cloud",
+                "proxied": false,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.20",
+                    "name": "test11.test4.cloud",
+                    "proxied": false,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c353",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1005",
+                    "zone_name": "test5.cloud"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/zones/1005/dns_records",
+            "headers": {
+                "Authorization": [
+                    "Bearer token5"
+                ]
+            },
+            "body": {
+                "content": "10.10.10.21",
+                "name": "test11.test5.cloud",
+                "proxied": true,
+                "type": "A",
+                "ttl": 3600
+            }
+        },
+        "httpResponse": {
+            "body": {
+                "errors": [],
+                "messages": [],
+                "success": true,
+                "result": {
+                    "content": "10.10.10.21",
+                    "name": "test11.test5.cloud",
+                    "proxied": false,
+                    "type": "A",
+                    "comment": "Domain verification record",
+                    "created_on": "2014-01-01T05:20:00.12346Z",
+                    "id": "023e105f4ecef8ad9ca31a8372d0c355",
+                    "locked": false,
+                    "meta": {
+                        "auto_added": true,
+                        "source": "primary"
+                    },
+                    "modified_on": "2014-01-01T05:20:00.12345Z",
+                    "proxiable": true,
+                    "tags": [
+                        "owner:dns-team"
+                    ],
+                    "ttl": 3600,
+                    "zone_id": "1005",
+                    "zone_name": "test5.cloud"
+                }
+            }
+        }
     }
 ]

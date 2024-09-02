@@ -38,6 +38,14 @@ def create_dnsrecord(instance, **_kwargs):
         if not instance.name.endswith("." + instance.zone.zone_name):
             instance.name = instance.name + "." + instance.zone.zone_name
 
+        if DnsRecord.objects.filter(
+            zone_id=instance.zone_id,
+            name=instance.name,
+            type=instance.type,
+            proxied=(not instance.proxied),
+        ).exists():
+            raise AbortRequest("Unable to create DNS Record on Cloudflare")
+
         client = CloudflareDnsClient(
             instance.zone,
             settings.PLUGINS_CONFIG["netbox_cloudflare_plugin"]["cloudflare_base_url"],
