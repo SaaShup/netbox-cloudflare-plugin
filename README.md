@@ -8,6 +8,12 @@ Manage Cloudflare with Netbox & style.
 
 ## Installation
 
+Below the compatibility list of the Netbox Docker PLugin and Netbox. Please chose the right version of the plugin depending of the Netbox version you use:
+
+| Netbox Version | Netbox Cloudlfare Plugin Version |
+| -------------- | -------------------------------- |
+| 4.1.\*         | 0.\*                             |
+
 You can follow [the official plugins installation
 instructions](https://docs.netbox.dev/en/stable/plugins/#installing-plugins).
 
