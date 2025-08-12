@@ -60,6 +60,8 @@ class ZoneAccount(NetBoxModel):
 class DnsRecord(NetBoxModel):
     """DNS entry definition class"""
 
+    is_deleted_manually = False
+
     CNAME = "CNAME"
     A = "A"
 
@@ -142,3 +144,9 @@ class DnsRecord(NetBoxModel):
     def get_absolute_url(self):
         """override"""
         return reverse("plugins:netbox_cloudflare_plugin:dnsrecord", args=[self.pk])
+
+    def delete(self, using=None, keep_parents=False):
+        """override"""
+        self.is_deleted_manually = True
+
+        return super().delete(using, keep_parents)

@@ -59,9 +59,9 @@ def create_dnsrecord(instance, **_kwargs):
 
 @receiver(pre_delete, sender=DnsRecord)
 def delete_dnsrecord(instance, **_kwargs):
-    """Delte a DNS Record on Cloudflare"""
+    """Delete a DNS Record on Cloudflare"""
 
-    if isinstance(_kwargs["origin"], DnsRecord):
+    if instance.is_deleted_manually is True:
         client = CloudflareDnsClient(
             instance.zone,
             settings.PLUGINS_CONFIG["netbox_cloudflare_plugin"]["cloudflare_base_url"],
