@@ -1,7 +1,7 @@
 """Filtersets definitions"""
 
 from django.db.models import Q
-from django_filters import ModelMultipleChoiceFilter
+from django_filters import filters, ModelMultipleChoiceFilter
 from netbox.filtersets import NetBoxModelFilterSet
 from .models import ZoneAccount, DnsRecord
 
