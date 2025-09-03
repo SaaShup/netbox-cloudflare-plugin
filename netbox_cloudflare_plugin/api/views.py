@@ -17,5 +17,6 @@ class DnsRecordViewSet(NetBoxModelViewSet):
     """DnsRecord view set class"""
 
     queryset = DnsRecord.objects.all()
+    filterset_class = filtersets.DnsRecordFilterSet
     serializer_class = DnsRecordSerializer
     http_method_names = ["get", "post", "delete", "options"]
