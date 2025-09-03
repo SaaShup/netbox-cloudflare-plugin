@@ -1,9 +1,9 @@
 """API views definitions"""
 
 from netbox.api.viewsets import NetBoxModelViewSet
+from .. import filtersets
 from .serializers import ZoneAccountSerializer, DnsRecordSerializer
 from ..models import ZoneAccount, DnsRecord
-
 
 class ZoneAccountViewSet(NetBoxModelViewSet):
     """ZoneAccount view set class"""
